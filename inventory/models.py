@@ -1,5 +1,6 @@
 from django.db import models
-
+from django.utils import timezone
+from django.forms import ValidationError
 
 class CurrencyField(models.DecimalField):
 
@@ -43,7 +44,41 @@ class MaterialStorage(models.Model):
     expiration_date = models.DateField(null=True, blank=True)
     purchase_date = models.DateField(auto_now_add=True)
     observation = models.TextField(blank=True, null=True)
+    allow_negative = models.BooleanField(default=False)
 
+    def __str__(self):
+        return f'{self.item} | {self.unit_cost} | {self.purchase_date}'
+    
     @property
     def total_cost(self):
         return self.unit_cost * self.unit_amount
+
+    @property
+    def current_amount(self):
+        return self.unit_amount - self.withdraw_amount
+    
+    @property
+    def withdraw_amount(self):
+        amount = 0
+        for withdraw in self.withdraws.all():
+            amount += withdraw.unit_amount
+        return amount 
+
+class MaterialStorageWithdraw(models.Model):
+    storage = models.ForeignKey(MaterialStorage, on_delete=models.CASCADE, related_name='withdraws')
+    unit_amount = models.PositiveSmallIntegerField()
+    withdraw_date = models.DateField(default=timezone.now)
+    
+    def save(self):
+        self.clean()
+        return super().save()
+    
+    def clean(self):
+        errors = {}
+        if not self.storage.allow_negative:
+            if self.unit_amount > self.storage.unit_amount:
+                unit_error = f'Storage amount is {self.storage.unit_amount} and cannot be negative'
+                errors.update({'unit_amount': unit_error})
+        if errors:
+            raise ValidationError(errors)
+        return super().clean()
