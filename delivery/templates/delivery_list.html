@@ -1,0 +1,29 @@
+{% extends "layout.html" %} {% block content %}
+<div class="container">
+    <table 
+        data-toggle="table" 
+        data-url="/test" 
+        data-search="true" 
+        data-show-columns="true"
+        data-side-pagination="server"
+        data-pagination="true"
+        data-page-size="10"
+        data-server-sort="true"
+        >
+        <thead>
+            <tr>
+                <th data-field="name" data-sortable="true">Name</th>
+                <th data-field="cpf" data-sortable="true">CPF</th>
+                <th data-field="age" data-sortable="true">Age</th>
+                <th data-field="email" data-sortable="true">Email</th>
+                <th data-field="phone" data-sortable="true">Phone</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+{% endblock content %}
+{% block scripts %}
+<script type="text/javascript">
+    
+</script>
+{% endblock scripts %}
