@@ -1,0 +1,244 @@
+[
+    {
+        "model": "delivery.product",
+        "pk": 1,
+        "fields": {
+            "description": "Simple Burguer",
+            "category": null,
+            "cost": "9.99",
+            "notes": "",
+            "recipe": ""
+        }
+    },
+    {
+        "model": "delivery.product",
+        "pk": 2,
+        "fields": {
+            "description": "X Burguer",
+            "category": null,
+            "cost": "13.99",
+            "notes": "",
+            "recipe": ""
+        }
+    },
+    {
+        "model": "delivery.product",
+        "pk": 3,
+        "fields": {
+            "description": "X Bacon",
+            "category": null,
+            "cost": "15.99",
+            "notes": "",
+            "recipe": ""
+        }
+    },
+    {
+        "model": "delivery.product",
+        "pk": 4,
+        "fields": {
+            "description": "X Tudo",
+            "category": null,
+            "cost": "15.99",
+            "notes": "",
+            "recipe": ""
+        }
+    },
+    {
+        "model": "delivery.product",
+        "pk": 5,
+        "fields": {
+            "description": "Triplo Queijo",
+            "category": null,
+            "cost": "19.99",
+            "notes": "",
+            "recipe": ""
+        }
+    },
+    {
+        "model": "delivery.product",
+        "pk": 6,
+        "fields": {
+            "description": "Triplo Bacon",
+            "category": null,
+            "cost": "19.99",
+            "notes": "",
+            "recipe": ""
+        }
+    },
+    {
+        "model": "delivery.product",
+        "pk": 7,
+        "fields": {
+            "description": "Batata",
+            "category": null,
+            "cost": "10.00",
+            "notes": "",
+            "recipe": ""
+        }
+    },
+    {
+        "model": "delivery.product",
+        "pk": 8,
+        "fields": {
+            "description": "Combo Burguer Feliz",
+            "category": null,
+            "cost": "16.99",
+            "notes": "",
+            "recipe": ""
+        }
+    },
+    {
+        "model": "delivery.productcombo",
+        "pk": 1,
+        "fields": {
+            "main_product": 8,
+            "sub_product": 7,
+            "unit_amount": 1,
+            "discount": "30.00"
+        }
+    },
+    {
+        "model": "delivery.productcombo",
+        "pk": 2,
+        "fields": {
+            "main_product": 8,
+            "sub_product": 1,
+            "unit_amount": 1,
+            "discount": "0.00"
+        }
+    },
+    {
+        "model": "delivery.productmenu",
+        "pk": 1,
+        "fields": {
+            "description": "Menu Padrao"
+        }
+    },
+    {
+        "model": "delivery.productmenu",
+        "pk": 2,
+        "fields": {
+            "description": "Menu Teste"
+        }
+    },
+    {
+        "model": "delivery.productoption",
+        "pk": 1,
+        "fields": {
+            "product": 1,
+            "menu": 1,
+            "discount": "0.00",
+            "sequence": 1
+        }
+    },
+    {
+        "model": "delivery.productoption",
+        "pk": 2,
+        "fields": {
+            "product": 2,
+            "menu": 1,
+            "discount": "0.00",
+            "sequence": 2
+        }
+    },
+    {
+        "model": "delivery.productoption",
+        "pk": 3,
+        "fields": {
+            "product": 4,
+            "menu": 1,
+            "discount": "0.00",
+            "sequence": 3
+        }
+    },
+    {
+        "model": "delivery.productoption",
+        "pk": 4,
+        "fields": {
+            "product": 3,
+            "menu": 1,
+            "discount": "0.00",
+            "sequence": 4
+        }
+    },
+    {
+        "model": "delivery.productoption",
+        "pk": 5,
+        "fields": {
+            "product": 4,
+            "menu": 1,
+            "discount": "0.00",
+            "sequence": 5
+        }
+    },
+    {
+        "model": "delivery.productoption",
+        "pk": 6,
+        "fields": {
+            "product": 5,
+            "menu": 1,
+            "discount": "0.00",
+            "sequence": 6
+        }
+    },
+    {
+        "model": "delivery.productoption",
+        "pk": 7,
+        "fields": {
+            "product": 6,
+            "menu": 1,
+            "discount": "0.00",
+            "sequence": 7
+        }
+    },
+    {
+        "model": "delivery.productoption",
+        "pk": 8,
+        "fields": {
+            "product": 1,
+            "menu": 2,
+            "discount": "0.00",
+            "sequence": 1
+        }
+    },
+    {
+        "model": "delivery.productoption",
+        "pk": 9,
+        "fields": {
+            "product": 6,
+            "menu": 2,
+            "discount": "50.00",
+            "sequence": 2
+        }
+    },
+    {
+        "model": "delivery.productoption",
+        "pk": 10,
+        "fields": {
+            "product": 8,
+            "menu": 1,
+            "discount": "0.00",
+            "sequence": 8
+        }
+    },
+    {
+        "model": "delivery.order",
+        "pk": 5,
+        "fields": {
+            "table_number": null,
+            "client": null,
+            "menu": 1,
+            "created_at": "2023-05-25T02:07:38.884Z"
+        }
+    },
+    {
+        "model": "delivery.productorder",
+        "pk": 8,
+        "fields": {
+            "product_option": 10,
+            "order": 5,
+            "unit_amount": 1,
+            "sub_total": "16.99"
+        }
+    }
+]

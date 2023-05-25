@@ -5,11 +5,14 @@ from .models import Material, MaterialGroup, MaterialStorage, MaterialStorageWit
 @admin.register(MaterialGroup)
 class MaterialGroupAdmin(admin.ModelAdmin):
     list_display = ['id', 'description']
-
+    search_fields = ['description']
+    
 
 @admin.register(Material)
 class MaterialAdmin(admin.ModelAdmin):
     list_display = ['id', 'description', 'group']
+    search_fields = ['description']
+    list_filter = ['group']
 
 
 @admin.register(MaterialStorage)

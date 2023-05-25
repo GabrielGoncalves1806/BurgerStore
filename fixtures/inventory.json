@@ -1,0 +1,203 @@
+[
+    {
+        "model": "inventory.materialgroup",
+        "pk": 1,
+        "fields": {
+            "description": "Vegetais"
+        }
+    },
+    {
+        "model": "inventory.materialgroup",
+        "pk": 2,
+        "fields": {
+            "description": "Frios"
+        }
+    },
+    {
+        "model": "inventory.materialgroup",
+        "pk": 3,
+        "fields": {
+            "description": "Massas"
+        }
+    },
+    {
+        "model": "inventory.materialgroup",
+        "pk": 4,
+        "fields": {
+            "description": "Laticinios"
+        }
+    },
+    {
+        "model": "inventory.materialgroup",
+        "pk": 5,
+        "fields": {
+            "description": "Temperos"
+        }
+    },
+    {
+        "model": "inventory.materialgroup",
+        "pk": 6,
+        "fields": {
+            "description": "Adicionais"
+        }
+    },
+    {
+        "model": "inventory.material",
+        "pk": 1,
+        "fields": {
+            "description": "Alface",
+            "group": 1
+        }
+    },
+    {
+        "model": "inventory.material",
+        "pk": 2,
+        "fields": {
+            "description": "Coentro",
+            "group": 1
+        }
+    },
+    {
+        "model": "inventory.material",
+        "pk": 3,
+        "fields": {
+            "description": "Cenoura",
+            "group": 1
+        }
+    },
+    {
+        "model": "inventory.material",
+        "pk": 4,
+        "fields": {
+            "description": "Tomate",
+            "group": 1
+        }
+    },
+    {
+        "model": "inventory.material",
+        "pk": 5,
+        "fields": {
+            "description": "Carne de Boi",
+            "group": 2
+        }
+    },
+    {
+        "model": "inventory.material",
+        "pk": 6,
+        "fields": {
+            "description": "Pao",
+            "group": 3
+        }
+    },
+    {
+        "model": "inventory.material",
+        "pk": 7,
+        "fields": {
+            "description": "Margarina",
+            "group": 4
+        }
+    },
+    {
+        "model": "inventory.material",
+        "pk": 8,
+        "fields": {
+            "description": "Leite",
+            "group": 4
+        }
+    },
+    {
+        "model": "inventory.material",
+        "pk": 9,
+        "fields": {
+            "description": "Carne de Frango",
+            "group": 2
+        }
+    },
+    {
+        "model": "inventory.material",
+        "pk": 10,
+        "fields": {
+            "description": "Linguica",
+            "group": 2
+        }
+    },
+    {
+        "model": "inventory.material",
+        "pk": 11,
+        "fields": {
+            "description": "Queijo Mussarela",
+            "group": 4
+        }
+    },
+    {
+        "model": "inventory.material",
+        "pk": 12,
+        "fields": {
+            "description": "Queijo Coalho",
+            "group": 4
+        }
+    },
+    {
+        "model": "inventory.material",
+        "pk": 13,
+        "fields": {
+            "description": "Queijo de Manteiga",
+            "group": 4
+        }
+    },
+    {
+        "model": "inventory.material",
+        "pk": 14,
+        "fields": {
+            "description": "Catchup",
+            "group": 6
+        }
+    },
+    {
+        "model": "inventory.material",
+        "pk": 15,
+        "fields": {
+            "description": "Maionese",
+            "group": 6
+        }
+    },
+    {
+        "model": "inventory.material",
+        "pk": 16,
+        "fields": {
+            "description": "Pimenta",
+            "group": 5
+        }
+    },
+    {
+        "model": "inventory.material",
+        "pk": 17,
+        "fields": {
+            "description": "Farinha de Trigo",
+            "group": 3
+        }
+    },
+    {
+        "model": "inventory.materialstorage",
+        "pk": 1,
+        "fields": {
+            "item": 11,
+            "unit_type": "KG",
+            "unit_cost": "17.90",
+            "unit_amount": "2.500",
+            "expiration_date": "2023-08-31",
+            "purchase_date": "2023-05-24",
+            "observation": "",
+            "allow_negative": true
+        }
+    },
+    {
+        "model": "inventory.materialstoragewithdraw",
+        "pk": 1,
+        "fields": {
+            "storage": 1,
+            "unit_amount": "1.500",
+            "withdraw_date": "2023-05-25"
+        }
+    }
+]
